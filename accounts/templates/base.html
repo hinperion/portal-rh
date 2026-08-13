@@ -61,7 +61,9 @@
 
     <nav>
         <a href="/dashboard/">Dashboard</a>
-        <a href="#">Funcionários</a>
+        {% if user.is_superuser or user.role == "HR" or user.role == "CEO" %}
+            <a href="{% url 'employee_list' %}">Funcionários</a>
+        {% endif %}
         <a href="#">Férias</a>
         <a href="#">Ausências</a>
         <a href="#">Payslips</a>
