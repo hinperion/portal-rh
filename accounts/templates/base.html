@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portal RH{% endblock %}</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 16px 32px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+       }
+
+       nav{
+        width: 220px;
+        min_height: calc(100vh - 70px);
+        background: #1f2937;
+        padding: 24px;
+        box-sizing: border-box;
+       }
+
+       nav a {
+        display: block;
+        color: white;
+        text-decoration: nome;
+        margin-bottom: 18px
+       }
+
+       .layout {
+        display: flex;
+       }
+
+       main {
+        padding: 32px;
+        flex: 1;
+       }
+    </style>
+</head>
+
+<body>
+<header>
+    <strong>Portal RH</strong>
+    
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Sair</button>
+    </form>
+</header>
+
+<div class="layout">
+
+    <nav>
+        <a href="/dashboard/">Dashboard</a>
+        <a href="#">Funcionários</a>
+        <a href="#">Férias</a>
+        <a href="#">Ausências</a>
+        <a href="#">Payslips</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</div>
+</body>
+</html>
