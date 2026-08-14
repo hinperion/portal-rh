@@ -1,30 +1,42 @@
-# HR Management Portal
+# Portal RH
 
-A web application built with Django for managing employee information, authentication and HR processes.
+HR Management System built with Django for employee management, authentication and HR processes.
 
 ## About the project
 
-This project is being developed as part of my Software Engineering journey, focusing on building a real-world business application using Python and Django.
+This project aims to create a complete Human Resources management platform inspired by real business systems.
+
+The system will allow employees, HR administrators and managers to manage information, requests and processes in an organised way.
 
 ## Features
 
+(Current)
+
 - User authentication
-- Employee management
+- Employee registration
 - Role-based access control
-- HR dashboard
-- Business process management
+
+(Coming soon)
+
+- Holiday management
+- Absence requests
+- Payslip management
+- HR reports
+- Dashboard analytics
 
 ## Technologies
 
 - Python
 - Django
 - SQLite
-- HTML
-- CSS
+- HTML5
+- CSS3
+- Git & GitHub
 
-## Future improvements
+## Screenshots
 
-- Employee documents
-- Holiday management
-- Payroll reports
-- Advanced dashboards
+Coming soon as the system develops.
+
+## Project Status
+
+🚧 In development
