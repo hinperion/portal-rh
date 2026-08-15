@@ -8,6 +8,41 @@ Lista de Funcionários - Portal RH
 
 <h1>Funcionários</h1>
 
-<p> Área restrita para gestão de funcionários.</p>
+<a href="{% url 'employee_create' %}">Novo Funcionário</a>
+
+<p>Área restrita para gestão de funcionários.</p>
+
+<table border="1" cellpadding="8"
+
+    <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+    </th>
+
+{% for employee in employees%}
+
+<tr>
+    <td>
+       {{ employee.user.get_full_name|default:employee.user.username }}
+    </td>
+
+    <td>
+        {{employee.cpf}}
+    </td>
+
+    <td>
+        {{employee.phone }}
+    </td>
+
+    <td>
+        Editar
+    </td>
+</tr>
+
+{% endfor %}
+
+</table>
 
 {% endblock %}
