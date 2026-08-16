@@ -37,7 +37,9 @@ Lista de Funcionários - Portal RH
     </td>
 
     <td>
-        Editar
+        <a href="{% url 'employee_update' employee.pk %}">Editar</a>
+
+        <a href="{% url 'employee_disable' employee.pk %}">Desativar funcionário</a>
     </td>
 </tr>
 

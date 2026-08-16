@@ -9,7 +9,8 @@ class EmployeeForm(forms.ModelForm):
     email = forms.EmailField()
     temporary_password = forms.CharField(
         label="Temporary Password",
-        widget=forms.PasswordInput
+        widget=forms.PasswordInput,
+        required=False
     )
     
     class Meta:
