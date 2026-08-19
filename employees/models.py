@@ -12,6 +12,8 @@ class Employee(models.Model):
     phone = models.CharField(max_length=20)
     address = models.TextField()
     is_active = models.BooleanField(default=True)
+    holiday_balance = models.PositiveIntegerField(default=30)
     
     def __str__(self):
         return self.user.get_full_name() or self.user.username
+    
